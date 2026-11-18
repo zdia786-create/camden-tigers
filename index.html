@@ -207,6 +207,29 @@ a:focus-visible,button:focus-visible{outline:3px solid #fbbf24;outline-offset:3p
 .btn{transition:transform .2s,box-shadow .2s,background .2s}.btn:hover{transform:translateY(-2px)}
 .js .rv{opacity:0;transform:translateY(28px);transition:opacity .7s ease,transform .7s ease}.js .rv.in{opacity:1;transform:none}
 @media (prefers-reduced-motion:reduce){.js .rv{opacity:1;transform:none;transition:none}}
+
+.joinsec{background:#0f0f10;color:#fff;position:relative;overflow:hidden}
+.joinsec::after{content:"";position:absolute;left:-140px;bottom:-140px;width:420px;height:420px;border-radius:50%;background:repeating-linear-gradient(-55deg,#f97316 0 22px,transparent 22px 56px);opacity:.15}
+.jgrid{display:grid;grid-template-columns:1fr 1.1fr;gap:56px;align-items:center;position:relative;z-index:1}
+.jtext h2 span{color:#f97316}
+.jtext p{color:#c8c8cc;margin:18px 0 20px;max-width:440px}
+.jlist{list-style:none;display:grid;gap:8px;margin-bottom:26px;color:#e7e5e4}
+.wa-btn{background:#25d366;color:#fff}.wa-btn:hover{background:#1ebe5b}
+.jsmall{font-size:.8rem;color:#8b8b91;margin-top:10px}
+.jform{background:#fff;color:#0f0f10;border-radius:22px;padding:30px;display:grid;gap:14px;box-shadow:0 30px 60px rgba(0,0,0,.4)}
+.jform label{display:grid;gap:6px;font-size:.82rem;font-weight:600}
+.jform input,.jform select,.jform textarea{font:inherit;font-weight:400;padding:12px 14px;border:1.5px solid #dcdad3;border-radius:12px;background:#fbfaf7;color:#0f0f10;width:100%}
+.jform input:focus,.jform select:focus,.jform textarea:focus{outline:0;border-color:#f97316}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.jform .chk{display:flex;gap:10px;align-items:flex-start;font-weight:400;font-size:.82rem;color:#3a3a3f}
+.jform .chk input{width:18px;height:18px;margin-top:2px;flex:none;accent-color:#f97316}
+.jform .btn{justify-self:start}
+.hp{position:absolute;left:-9999px}
+.guardian{display:none!important}.guardian.on{display:grid!important}
+.wa-float{position:fixed;right:18px;bottom:18px;z-index:60;width:58px;height:58px;border-radius:50%;background:#25d366;color:#fff;display:grid;place-items:center;box-shadow:0 10px 30px rgba(0,0,0,.3)}
+.wa-float svg{width:30px;height:30px}
+@media(max-width:860px){.jgrid,.row2{grid-template-columns:1fr}.jform{padding:22px}}
+
 /* RESPONSIVE */
 @media(max-width:1100px){
   .teams2{grid-template-columns:1fr}
@@ -254,7 +277,7 @@ a:focus-visible,button:focus-visible{outline:3px solid #fbbf24;outline-offset:3p
       <li><a href="#sponsor">Sponsors</a></li>
       <li><a href="committee.html">Committee</a></li>
       <li><a href="#contact">Contact</a></li>
-      <li><a href="#trials" class="btn btn-primary">Register</a></li>
+      <li><a href="#join" class="btn btn-primary">Join Our Club</a></li>
     </ul>
   </div>
 </header>
@@ -266,7 +289,7 @@ a:focus-visible,button:focus-visible{outline:3px solid #fbbf24;outline-offset:3p
       <h1>Pride.<br>Passion.<br><span>Community.</span></h1>
       <p>Inspiring, engaging and empowering young people through Football, Cricket and Badminton since 2010.</p>
       <div class="cta">
-        <a href="#trials" class="btn btn-primary">Join the Club →</a>
+        <a href="#join" class="btn btn-primary">Join the Club →</a>
         <a href="#match" class="btn btn-ghost">Match Centre</a>
       </div>
     </div>
@@ -312,7 +335,7 @@ a:focus-visible,button:focus-visible{outline:3px solid #fbbf24;outline-offset:3p
   <div class="wrap">
     <div class="head-row">
       <div><span class="eyebrow">Our Teams</span><h2>First Team &amp;<br>Second Team</h2></div>
-      <a href="#trials" class="btn btn-primary">Join a team</a>
+      <a href="#join" class="btn btn-primary">Join a team</a>
     </div>
     <div class="teams2">
       <div class="tcard t1">
@@ -338,7 +361,7 @@ a:focus-visible,button:focus-visible{outline:3px solid #fbbf24;outline-offset:3p
           <div class="ad-logo">YOUR<br>LOGO</div>
           <div><h3>Your Business Name Here</h3><p>Advertise with Camden Tigers. Your brand seen by players, families and supporters every match day.</p></div>
         </div>
-        <a href="mailto:admin@camdentigers.com.au?subject=Advertising%20enquiry" class="btn btn-primary" style="position:relative;z-index:1">Advertise here →</a>
+        <a href="#join" class="btn btn-primary" style="position:relative;z-index:1">Advertise here →</a>
       </div>
       <div class="fixtures">
         <div class="fixture">
@@ -360,12 +383,44 @@ a:focus-visible,button:focus-visible{outline:3px solid #fbbf24;outline-offset:3p
       <span class="eyebrow" style="color:#fff;opacity:.85">Assessments &amp; Trials</span>
       <h2>Ready to become<br>a Tiger?</h2>
       <p style="margin:18px 0 28px;max-width:440px">Boys and girls of all abilities are welcome. Come along to a trial session or register your interest online.</p>
-      <a href="mailto:admin@camdentigers.com.au?subject=Registration" class="btn btn-primary">Register Interest →</a>
+      <a href="#join" class="btn btn-primary">Register Interest →</a>
     </div>
     <div class="trial-cards">
       <div class="trial"><span class="tag" style="background:#0f0f10">Date TBC</span><h3 style="margin-top:10px">Senior Trials</h3><p>Time and venue to be confirmed</p></div>
       <div class="trial"><span class="tag" style="background:#0f0f10">Date TBC</span><h3 style="margin-top:10px">Junior Trials</h3><p>Time and venue to be confirmed</p></div>
     </div>
+  </div>
+</section>
+
+
+<section class="joinsec" id="join">
+  <div class="wrap jgrid">
+    <div class="jtext">
+      <span class="eyebrow">Join the Club</span>
+      <h2>Become a<br><span>Tiger</span> today</h2>
+      <p>Fill in the form and a club member will get back to you. Boys and girls of all abilities are welcome in Football, Cricket and Badminton.</p>
+      <ul class="jlist"><li>✔ All abilities welcome</li><li>✔ Senior and junior teams</li><li>✔ Friendly, volunteer-run club</li></ul>
+      <a class="btn wa-btn js-wa" href="#" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2l-.6-.3z"/></svg> Chat on WhatsApp</a>
+      <p class="jsmall js-wa-off">WhatsApp number coming soon.</p>
+    </div>
+    <form class="jform" name="join" method="POST" action="/thanks.html" data-netlify="true" netlify-honeypot="bot-field">
+      <input type="hidden" name="form-name" value="join">
+      <p class="hp"><label>Leave this empty <input name="bot-field"></label></p>
+      <div class="row2">
+        <label>Full name *<input name="name" required autocomplete="name"></label>
+        <label>Phone *<input name="phone" type="tel" required autocomplete="tel"></label>
+      </div>
+      <label>Email<input name="email" type="email" autocomplete="email"></label>
+      <div class="row2">
+        <label>Sport *<select name="sport" required><option value="">Choose…</option><option>Cricket</option><option>Football</option><option>Badminton</option></select></label>
+        <label>Team *<select name="team" required id="team"><option value="">Choose…</option><option>Senior (18+)</option><option>Junior (under 18)</option></select></label>
+      </div>
+      <label class="guardian" id="guardian">Parent / guardian name (for players under 18)<input name="guardian"></label>
+      <label>Message<textarea name="message" rows="3" placeholder="Playing experience, questions…"></textarea></label>
+      <label class="chk"><input type="checkbox" name="consent" value="yes" required> I agree that Camden Tigers Sports Club can use these details to contact me about joining. If the player is under 18, I am their parent or guardian.</label>
+      <button class="btn btn-primary" type="submit">Send my details →</button>
+      <p class="jsmall">We only use your details to reply about joining. We never share them.</p>
+    </form>
   </div>
 </section>
 
@@ -427,7 +482,7 @@ a:focus-visible,button:focus-visible{outline:3px solid #fbbf24;outline-offset:3p
         <div>Digital channels</div>
         <div>Events &amp; club materials</div>
       </div>
-      <a href="mailto:admin@camdentigers.com.au?subject=Sponsorship%20enquiry" class="btn btn-primary">Become a Sponsor →</a>
+      <a href="#join" class="btn btn-primary">Become a Sponsor →</a>
     </div>
   </div>
 </section>
@@ -447,22 +502,36 @@ a:focus-visible,button:focus-visible{outline:3px solid #fbbf24;outline-offset:3p
         <h4>Quick Links</h4>
         <ul>
           <li><a href="#about">About Us</a></li><li><a href="#pathway">Teams &amp; Pathway</a></li>
-          <li><a href="#trials">Trials &amp; Registration</a></li><li><a href="#match">Match Centre</a></li>
+          <li><a href="#join">Join the Club</a></li><li><a href="#match">Match Centre</a></li>
           <li><a href="#sponsor">Sponsorship</a></li><li><a href="#">Members</a></li>
         </ul>
       </div>
       <div>
         <h4>Find Us</h4>
         <p>Club address to be added</p>
-        <p style="margin-top:10px"><a href="mailto:admin@camdentigers.com.au">admin@camdentigers.com.au</a></p>
+        <p style="margin-top:10px" class="js-email">Club email coming soon</p>
+        <p><a class="js-wa" href="#" target="_blank" rel="noopener" style="color:#25d366;font-weight:600">WhatsApp us</a></p>
         <div class="map"><iframe loading="lazy" title="Map" src="https://maps.google.com/maps?q=Camden&output=embed"></iframe></div>
       </div>
     </div>
     <div class="copy"><span>© 2026 Camden Tigers Sports Club. All rights reserved.</span><span><a href="#" style="color:inherit">Privacy Policy</a> · <a href="#" style="color:inherit">Safeguarding</a> · Founded 2010</span></div>
   </div>
 </footer>
+<a class="wa-float js-wa" href="#" target="_blank" rel="noopener" aria-label="Chat on WhatsApp"><svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2l-.6-.3z"/></svg></a>
 
 <script>
+/* ===== EDIT HERE: club contact details ===== */
+const CLUB_WHATSAPP = "447723327991";   // e.g. "447123456789"  (country code, no + or spaces)
+const CLUB_EMAIL    = "";   // e.g. "info@camdentigerssportsclub.com"
+/* =========================================== */
+(function(){
+  const wa=document.querySelectorAll('.js-wa'), off=document.querySelectorAll('.js-wa-off');
+  if(CLUB_WHATSAPP){const u="https://wa.me/"+CLUB_WHATSAPP+"?text="+encodeURIComponent("Hi, I'd like to join Camden Tigers Sports Club.");wa.forEach(a=>a.href=u);off.forEach(e=>e.style.display="none");}
+  else{wa.forEach(a=>a.style.display="none");}
+  if(CLUB_EMAIL){document.querySelectorAll('.js-email').forEach(e=>e.innerHTML='<a href="mailto:'+CLUB_EMAIL+'">'+CLUB_EMAIL+'</a>');}
+  const t=document.getElementById('team'),g=document.getElementById('guardian');
+  if(t)t.addEventListener('change',()=>g.classList.toggle('on',t.value.startsWith('Junior')));
+})();
 document.documentElement.classList.add('js');
 (function(){const els=document.querySelectorAll('section .wrap > *, .stat, .tcard, .value, .vid, .gal figure, .fixture, .honour');
 els.forEach(e=>e.classList.add('rv'));
